@@ -97,13 +97,13 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 		
 		//now express the measurements in cart as follows:
 		// px and py are the cosine and sine respectively
-		// and dpx and dpy are the derivs of px and py
+		// and dpx and dpy are the components of dphi
 
 		//deal with the case that can make px and py both equal to zero
 		if (rho == 0) {
 			rho = zero_replacement;
 		}
-		ekf_.x_ << rho * cos(phi), rho * sin(phi), -rho*sin(phi), rho*cos(phi);
+		ekf_.x_ << rho*cos(phi), rho*sin(phi), dphi*cos(phi), dphi*sin(phi);
 		
   }
 

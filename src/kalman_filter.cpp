@@ -97,11 +97,11 @@ VectorXd KalmanFilter::NormaliseError(const VectorXd &z, const VectorXd &z_pred)
 	VectorXd NormError = VectorXd(3);
 	NormError = z - z_pred;
 	while (NormError[1] < -M_PI) {
-		NormError[1] += M_PI;
+		NormError[1] += 2*M_PI;
 	}
 
 	while (NormError[1] > M_PI) {
-		NormError[1] -= M_PI;
+		NormError[1] -= 2*M_PI;
 	}
 	return NormError;
 }
