@@ -1,5 +1,5 @@
 # Extended-kalman
-Udacity - Term 2 - Project 1
+## Udacity - Term 2 - Project 1
 
 This project involved the construction of a Kalman and Extended Kalman filter, to read in RADAR and LIDAR data, to determine the relative position and speed of a tracked object. At each time step, the estimated state is compared to the ground-truth value, in order to produce a Root Mean Squared Error (RMSE) of the positive (in x and y) and the velocity (in x and y).
 
@@ -17,5 +17,24 @@ The files were also tested on Ubuntu 16.04. The user may enter the following sim
 * `mkdir build && cd build`
 * `cmake .. -G "Unix Makefiles" && make`
 * `./ExtendedKF ../data/sample-laser-radar-measurement-data-1.txt output.txt`
+
+The following directly addresses the rubric requirements for this project:
+
+### Compiling
+
+| Criteria  | Outcomes |
+| ------------- | ------------- |
+| Code should compile without error with `cmake` and `make`  | Tested and compiles without error  |
+
+### Accuracy
+The following table shows the RMSE requirements and results for data-1 sample
+
+| Requirements (<=) | Outcomes |
+| ------------- | ------------- |
+| px = 0.08 | px =  |
+| py = 0.08 | py =  |
+| vx = 0.60 | vx =  |
+| vy = 0.60 | vy =  |
+
 
 
