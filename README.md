@@ -15,7 +15,7 @@ The user may enter the following commands in cmd to build, in Windows:
 
 The files were also tested on Ubuntu 16.04. The user may enter the following similar commands:
 * `mkdir build && cd build`
-* `cmake .. -G "Unix Makefiles" && make`
+* `cmake .. && make`
 * `./ExtendedKF ../data/sample-laser-radar-measurement-data-1.txt output.txt`
 
 ## Response to rubric requirements
